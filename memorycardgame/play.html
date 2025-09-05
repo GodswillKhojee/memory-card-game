@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>play</title>
+    <link rel="icon" href="color.png" type="png/image">
+    <link rel="stylesheet" href="play.css">
+    <link
+    rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+
+</head>
+<body>
+    <div class="intro">
+        <h1 class="logo-header" >
+          <span class="logo">be</span><span class="logo">gin.</span><br>
+        </h1>
+  </div>
+  <h1>memory Card Game</h1>
+    <div class="container">
+        <div class="startgame">
+            <div class="card active" level="2" column="2" row="2">
+                <div class="front">easy</div>
+                <div class="back">2 * 2</div>
+            </div>
+            <div class="card" level="6" column="3" row="4">
+                <div class="front">normal</div>
+                <div class="back">3 * 4</div>
+            </div>
+            <div class="card" level="8" column="4" row="4">
+                <div class="front">hard</div>
+                <div class="back">4 * 4</div>
+            </div>
+            <span></span>
+            <button>start</button>
+            <span></span>
+        </div>
+        <div class="playground"></div>
+    </div>
+    <i class="fa-solid fa-repeat" style="display: none;"></i>
+  <script src="play.js"></script>
+</body>
+</html>

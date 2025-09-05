@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Poppins"
+}
+
+/* header{
+	position: relative;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 80px;
+}
+
+header h4{
+	position: absolute;
+	left: 10%;
+	bottom: 1rem;
+	font-size: 1.6rem;
+} */
+.intro{
+	position: fixed;
+	z-index: 1;
+	left: 0%;
+	top: 0%;
+	width: 100%;
+	height: 100vh;
+	background-color: #2B2D42;
+	transition: 2s;
+}
+
+.logo-header{
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: #D9DCD6;
+}
+
+.logo{
+	position: relative;
+	display: inline-block;
+	bottom: -20px;
+	opacity: 0;
+}
+
+.logo.active{
+	bottom: 0;
+	opacity: 1;
+	transition: ease-in-out 0.5s;
+}
+
+.logo.fade{
+	bottom: 0;
+	opacity: 0;
+	transition: ease-in-out 1s;
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins";
+}
+
+body{
+    background-color:  #555770;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.container{
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 14px 14px 0 0 #000000;
+    margin-top: 10px;
+}
+.startgame{
+    display: grid;
+    gap: 25px;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(1, 100px);
+}
+.startgame .card   {
+    font-size: 1.2rem;
+    user-select: none;
+}
+.card{
+    text-align: center;
+    cursor: pointer;
+    font-size: 2rem;
+}
+.card div{
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    color: black;
+    background-color: #fff;
+    border-radius: 10px;
+    transition: all 500ms ease-out;
+    backface-visibility: hidden;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, .1);
+    position: absolute;
+}
+.startgame button{
+    
+    cursor: pointer;
+    height: 40px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    box-shadow:0 3px 10px rgba(0, 0, 0, .1); 
+    color: #fff;
+    background-color:  #555770;
+}
+.startgame .card.active div{
+    border: 2px solid  #555770;
+}
+.card .back{
+    transform: rotateY(-180deg);
+}
+
+.startgame .card:hover .front,
+.card.flip .front{
+    transform: rotateY(180deg);
+}
+.startgame .card:hover .back
+,.card.flip .back{
+    transform: rotateY(0deg);
+}
+.fa-repeat{
+    font-size: 25px;
+    margin-top: 1.5rem;
+    cursor: ponter;
+}
+.playground{
+    display: grid;
+    gap: 20px;
+    display: none;
+}
+.card.shake{
+    animation: shake 0.35s ease-in-out;
+}
+@keyframes shake{
+    0%,
+    100%{
+        transform: translateX(0);
+    }
+    20%{
+        transform: translateX(-13px);
+    }
+    40%{
+        transform: translateX(13px);
+    }
+    60%{
+        transform: translateX(-8px);
+    }
+    80%{
+        transform: translateX(8px);
+    }
+
+}
+.card.match{
+    animation: rubberBand 1s linear forwards;
+}
+@keyframes rubberBand {
+     0%{
+        transform: scaleX(1);
+     }
+     40%{
+        transform: scaleX(1.12) scaleY(0.75);
+     }
+     55%{
+        transform: scaleX(0.85) scaleY(1);
+     }
+     65%{
+        transform:scaleX(1.09) scaleY(0.85);
+     }
+     75%{
+        transform: scaleX(0.9) scaleY(0.95);
+     }
+     90%{
+        transform: scaleX(1.05) scaleY(0.95);
+     }
+     100%{
+        tranform: scaleX(1) scaleY(1)
+     }
+}

@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+    font-family: "Poppins";
+}
+body{
+    background-color: #4A77B3;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+    
+header{
+	position: absolute;
+	top: 30%;
+	width: 100%;
+	height: 80px;
+}
+
+
+
+/* Splash Screen */
+
+.intro{
+	position: fixed;
+	z-index: 1;
+	left: 0%;
+	top: 0%;
+	width: 100%;
+	height: 100vh;
+	/* background-color: #2B2D42; */
+    background-color: #1F509A;
+	transition: 2s;
+}
+
+.logo-header{
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	/* color: #D9DCD6; */
+    color: white;
+}
+
+.logo{
+	position: relative;
+	display: inline-block;
+	bottom: -20px;
+	opacity: 0;
+}
+
+.logo.active{
+	bottom: 0;
+	opacity: 1;
+	transition: ease-in-out .5s;
+}
+
+.logo.fade{
+	bottom: 0;
+	opacity: 0;
+	transition: ease-in-out 1s;
+}
+header h4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+	font-size: 2rem;
+    text-shadow: none;
+}
+
+
+.play a{
+    text-decoration: none;
+    color: black;
+}
+
+.container{
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    height:215px;
+    width: 400px;
+    padding: 25px;
+    box-shadow: 14px 14px 0 0 #000000;
+    margin-top: 10px;
+    transition: 0.5s ease-in-out;
+}
+.container:hover{
+    box-shadow: 20px 20px 0px 5px #000000;
+}
+.box{
+    display: grid;
+    gap: 25px;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(1, 100px);
+}
+
+.card{
+    text-align: center;
+    cursor: pointer;
+    font-size: 2rem;
+    padding-top: 30%;
+}
+.card div{
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    color: black;
+    background-color: #fff;
+    border-radius: 10px;
+    transition: all 500ms ease-out;
+    backface-visibility: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, .1);
+    position: absolute;
+}
+.card div:hover{
+    box-shadow:  0px 4px 20px #000000;
+}
